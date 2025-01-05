@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        n=prompt("Enter a num: ")
+        str=""
+        s=""
+        for(i=0;i<n.length;i++){
+            if(!str.includes(n[i])){
+                str=str+n[i]
+            }
+        }
+        console.log("Duplicate Numbers removed and stored in a string",str);
+        for(j=0;j<str.length;j++){
+            fact=1
+            for(k=1;k<=str[j];k++){
+                fact=fact*k
+                
+            }
+            
+            s=s+fact+" "
+        }
+        console.log("Factorial of a Number each digit is ",s)
+
+
+
+        n=+prompt("Enter a Num: ")
+        fact=1
+        s=""
+        for(i=1;i<=n;i++){
+            fact=fact*i;
+            s=s+i
+            if(i<n){
+                s=s + " * "
+            }
+        }
+        console.log(s+" = "+fact)
+
+
+
+        n=+prompt("Enter a Num: ")
+        n1=0,n2=1
+        i=1
+        sum=0
+        while(n1<=n){
+            if(n1>1){
+                flag=true
+                for(j=2;j<n1;j++){
+                    if(n1%j==0){
+                        flag=false;
+                    }
+                }
+                if(flag){
+                    sum=sum+n1
+                }
+            }
+            console.log(n1)
+            n3=n1+n2
+            n1=n2
+            n2=n3
+            i++
+        }
+        console.log("Sum of fibanocci series prime number is ",sum)
+
+    </script>
+</body>
+</html>
