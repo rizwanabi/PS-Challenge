@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Today Iam doing the challenge on sum of the prime numbers in fibanocci series
+
+n=+prompt("Enter a Num: ")
+//assign the values to perform a fibanocci series
+n1=0,n2=1
+i=1
+sum=0
+
+while(n1<=n){
+    if(n1>1){
+        flag=true
+        for(j=2;j<n1;j++){
+            if(n1%j==0){
+                flag=false
+            }
+        }
+        
+        if(flag){
+            //we have to assign the flag because we have to perform the sum 
+            sum=sum+n1
+            
+        }
+        
+    }
+    console.log(n1)
+    n3=n1+n2
+    n1=n2
+    n2=n3
+    i++
+}
+console.log("Sum of the prime numbers in fibanocci series is ",sum)
+    </script>
+</body>
+</html>
